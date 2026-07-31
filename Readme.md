@@ -1,4 +1,4 @@
-# Slack Project
+# ThreadLine
 
 A Slack-like workspace and channel messaging app, with a React/Vite frontend and an Express/Socket.IO backend.
 
