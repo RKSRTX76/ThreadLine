@@ -9,6 +9,7 @@ import { NotFound } from "./pages/notFound/NotFound"
 import { Channel } from "./pages/workspace/channel/Channel"
 import { JoinCodePage } from "./pages/workspace/JoinCodePage"
 import { JoinPage } from "./pages/workspace/JoinPage"
+import { MemberProfile } from "./pages/workspace/member/MemberProfile"
 import { WorkspaceLayout } from "./pages/workspace/WorkspaceLayout"
 
 export const AppRoutes = ()=>{
@@ -19,6 +20,7 @@ export const AppRoutes = ()=>{
               <Route path='/' element = {<ProtectedRoute><Auth><Home /></Auth></ProtectedRoute>}  />
               <Route path='/workspaces/:workspaceId' element = {<ProtectedRoute> <WorkspaceLayout /></ProtectedRoute>}  />
               <Route path='/workspaces/:workspaceId/channels/:channelId' element={<ProtectedRoute><WorkspaceLayout><Channel /></WorkspaceLayout></ProtectedRoute>} />
+              <Route path='/workspaces/:workspaceId/members/:memberId' element={<ProtectedRoute><WorkspaceLayout><MemberProfile /></WorkspaceLayout></ProtectedRoute>} />
               <Route path="/join" element={<ProtectedRoute><JoinCodePage /></ProtectedRoute>} />
               <Route path="/join/:joincode" element={<ProtectedRoute><JoinPage /></ProtectedRoute>} />
               

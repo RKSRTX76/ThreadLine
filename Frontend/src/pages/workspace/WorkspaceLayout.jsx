@@ -9,7 +9,7 @@ import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/componen
 import { useGetWorkspaceById } from "@/hooks/workspace/useGetWorkspaceById";
 
 export const WorkspaceLayout = ({children})=>{
-    const { workspaceId, channelId } = useParams();
+    const { workspaceId, channelId, memberId } = useParams();
     const navigate = useNavigate();
     const { workspace, isSuccess } = useGetWorkspaceById(workspaceId);
 
@@ -19,10 +19,10 @@ export const WorkspaceLayout = ({children})=>{
     });
 
     useEffect(() => {
-        if (!channelId && isSuccess && workspace?.channels?.length > 0) {
+        if (!channelId && !memberId && isSuccess && workspace?.channels?.length > 0) {
             navigate(`/workspaces/${workspaceId}/channels/${workspace.channels[0]._id}`, { replace: true });
         }
-    }, [channelId, isSuccess, workspace, workspaceId, navigate]);
+    }, [channelId, memberId, isSuccess, workspace, workspaceId, navigate]);
 
     return (
         <div className="h-[100vh] overflow-hidden bg-background">

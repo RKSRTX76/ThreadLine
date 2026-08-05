@@ -1,9 +1,8 @@
 import { cva } from "class-variance-authority";
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { useCurrentWorkspace } from "@/hooks/context/useCurrentWorkspace"
 import { cn } from "@/lib/utils";
 
 
@@ -20,8 +19,7 @@ const userItemVariants = cva(
 );
 
 export const UserItem = ({id , label = 'member', image, variant = 'default'}) =>{
-    
-    const { workspace } = useCurrentWorkspace();
+    const { workspaceId } = useParams();
     
     return (
         <Button 
@@ -30,7 +28,7 @@ export const UserItem = ({id , label = 'member', image, variant = 'default'}) =>
         size="sm"
         asChild
         >
-            <Link className="flex w-full min-w-0 items-center gap-2" to={`/workspace/${workspace?._id}/members/${id}`} >
+            <Link className="flex w-full min-w-0 items-center gap-2" to={`/workspaces/${workspaceId}/members/${id}`} >
                 <Avatar className="size-7">
                     <AvatarImage src={image} />
                     <AvatarFallback
