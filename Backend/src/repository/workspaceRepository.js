@@ -21,7 +21,7 @@ export const createWorkSpace = async ({ workspaceName, description, owner, joinC
 
         await addChannelToWorkSpace(
             workspace._id,
-            'slack-general'
+            'general'
         );
 
         return Workspace.findById(workspace._id)

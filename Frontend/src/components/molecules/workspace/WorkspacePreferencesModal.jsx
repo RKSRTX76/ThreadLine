@@ -55,7 +55,7 @@ export const WorkspacePreferenceModal = () =>{
             await deleteWorkspaceMutation();
             queryClient.invalidateQueries(['fetchWorkspaceById', workspaceId]);
             setOpenPreferences(false);
-            navigate('/home');
+            navigate('/');
 
             toast.add({
                 title : "Workspace deleted successfully",

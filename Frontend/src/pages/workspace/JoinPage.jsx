@@ -21,7 +21,7 @@ export const JoinPage = () => {
             if (joinedWorkspace?._id) {
                 navigate(`/workspaces/${joinedWorkspace._id}`);
             } else {
-                navigate('/home');
+                navigate('/');
             }
         } catch (error) {
             toast.add({
