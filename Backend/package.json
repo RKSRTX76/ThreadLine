@@ -25,6 +25,7 @@
     "http-status-codes": "^2.3.0",
     "ioredis": "^5.11.1",
     "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.7.4",
     "nodemailer": "^9.0.3",
     "nodemon": "^3.1.14",
     "socket.io": "^4.8.3",
@@ -35,7 +36,6 @@
     "@eslint/js": "^10.0.1",
     "eslint": "^10.7.0",
     "globals": "^17.7.0",
-    "mongoose": "^9.7.4",
     "prettier": "^3.9.5"
   }
 }
