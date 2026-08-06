@@ -2,6 +2,8 @@
 
 A Slack-like workspace and channel messaging app, with a React/Vite frontend and an Express/Socket.IO backend.
 
+**Live Demo:** [https://thread-line-phi.vercel.app/](https://thread-line-phi.vercel.app/)
+
 Supports user authentication, workspaces, channels, invite codes, text and image messages, and real-time channel updates.
 
 ## Repository layout
